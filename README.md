@@ -1,13 +1,15 @@
 # CHANGELOG
 
 ```
-make docker-push IMG=ghcr.io/kube-slice/kubeslice-controller:latest
-
-make docker-push IMG=ghcr.io/kube-slice/worker-operator:latest
-
+make docker-push IMG=ghcr.io/kube-slice/dns:latest
 make docker-push IMG=ghcr.io/kube-slice/gateway-certs-generator:latest
-
+make docker-push IMG=ghcr.io/kube-slice/gateway-certs-generator:latest
+make docker-push IMG=ghcr.io/kube-slice/kubeslice-controller:latest
+make docker-push IMG=ghcr.io/kube-slice/kubeslice-gw-sidecar:latest
+make docker-push IMG=ghcr.io/kube-slice/kubeslice-router-sidecar:latest
+make docker-push IMG=ghcr.io/kube-slice/netops:latest
 make docker-push IMG=ghcr.io/kube-slice/wait-for-it:latest
+make docker-push IMG=ghcr.io/kube-slice/worker-operator:latest
 ```
 
 ```
