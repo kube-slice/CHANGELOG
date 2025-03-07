@@ -1,5 +1,7 @@
 # CHANGELOG
 
+## Build commands
+
 ```
 make docker-push IMG=ghcr.io/kube-slice/dns:latest
 make docker-push IMG=ghcr.io/kube-slice/gateway-certs-generator:latest
@@ -11,6 +13,22 @@ make docker-push IMG=ghcr.io/kube-slice/netops:latest
 make docker-push IMG=ghcr.io/kube-slice/wait-for-it:latest
 make docker-push IMG=ghcr.io/kube-slice/worker-operator:latest
 ```
+
+## Missing arm64 image
+
+```
+alpine/k8s:1.22.9  ->>>>>>
+aveshasystems/openvpn-server.alpine:1.0.4
+
+
+crane manifest aveshasystems/sig-storage-csi-node-driver-registrar:v2.8.1 | jq | grep amr64
+crane manifest aveshasystems/spiffe-csi-driver:0.2.7 | jq | grep amr64
+crane manifest aveshasystems/spiffe-spire-controller-manager:0.2.3 | jq | grep amr64
+crane manifest aveshasystems/spire-agent:1.9.2 | jq | grep amr64
+crane manifest aveshasystems/spire-server:1.9.2 | jq | grep amr64
+```
+
+## Imagelist
 
 ```
 alpine/k8s:1.22.9
