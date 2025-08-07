@@ -83,3 +83,17 @@ registry.k8s.io/kube-proxy:v1.32.2
 registry.k8s.io/kube-scheduler-arm64:v1.32.2
 registry.k8s.io/kube-scheduler:v1.32.2
 ```
+
+## Charts
+
+```
+> helm package charts/kubeslice-controller
+> helm push kubeslice-controller-v2025.7.31.tgz oci://ghcr.io/appscode-charts
+
+> helm package charts/kubeslice-worker
+>helm push kubeslice-worker-v2025.7.31.tgz oci://ghcr.io/appscode-charts
+
+ghcr.io/appscode-charts/kubeslice-controller:v2025.7.31
+ghcr.io/appscode-charts/kubeslice-worker:v2025.7.31
+```
+
